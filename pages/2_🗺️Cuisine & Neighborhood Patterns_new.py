@@ -7,9 +7,6 @@
 # -*- coding: utf-8 -*-
 # @Time    : 2026/4/14 09:09
 # @Software: PyCharm
-import streamlit as st
-from vega_datasets import data
-
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
