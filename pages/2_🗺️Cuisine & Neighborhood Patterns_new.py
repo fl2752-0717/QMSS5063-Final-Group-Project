@@ -11,7 +11,6 @@
 # -*- coding: utf-8 -*-
 
 import streamlit as st
-from vega_datasets import data
 import pandas as pd
 import numpy as np
 import plotly.express as px
