@@ -277,10 +277,12 @@ def build_scatter_chart(df):
 def takeaway_violin(df):
     medians = df.groupby("grade")["sentiment"].median().reindex(GRADE_ORDER)
     return (
-        "Sentiment distributions look similar across all three grades, with medians clustered at similar levels. "
-        f"Grade A has the widest spread, while Grade B and C are narrower partly because the matched sample is much smaller."
+        "Review sentiment distributions are highly similar across Grades A, B, and C, "
+        "with substantial overlap across all three groups. Because the matched samples "
+        "for Grades B and C are much smaller than Grade A, differences should be interpreted "
+        "cautiously; overall, public sentiment does not appear to clearly track inspection grade."
     )
-
+    
 def takeaway_avg(summary, p_val, d_val):
     means = summary.set_index("grade")["mean"]
     return (
