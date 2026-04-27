@@ -7,8 +7,6 @@
 # -*- coding: utf-8 -*-
 # @Time    : 2026/4/14 09:09
 # @Software: PyCharm
-import streamlit as st
-from vega_datasets import data
 
 import streamlit as st
 import pandas as pd
