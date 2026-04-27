@@ -10,3 +10,5 @@ pyarrow
 vaderSentiment
 rapidfuzz
 wordcloud
+geopandas
+shapely
