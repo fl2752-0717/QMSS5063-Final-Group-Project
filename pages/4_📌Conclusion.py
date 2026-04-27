@@ -45,17 +45,15 @@ GRADE_COLORS = {"A": "#2ecc71", "B": "#f39c12", "C": "#e74c3c"}
 BORO_ORDER = ["Manhattan", "Brooklyn", "Queens", "Bronx", "Staten Island"]
 MATCH_THRESHOLD = 85
 
+from pathlib import Path
+
+BASE_DIR = Path(__file__).resolve().parent.parent
+
 def locate_inspection_csv():
-    base_dir = Path(__file__).resolve().parents[1]
-    candidates = [
-        base_dir / "DOHMH_New_York_City_Restaurant_Inspection_Results_20260414.csv",
-        base_dir / "data" / "DOHMH_New_York_City_Restaurant_Inspection_Results_20260414.csv",
-        Path("/mnt/data/DOHMH_New_York_City_Restaurant_Inspection_Results_20260414.csv"),
-    ]
-    for p in candidates:
-        if p.exists():
-            return p
-    raise FileNotFoundError("Inspection CSV not found.")
+    path = BASE_DIR / "data" / "inspection_sample.csv"
+    if not path.exists():
+        raise FileNotFoundError(f"Inspection CSV not found: {path}")
+    return path
 
 def locate_tripadvisor_csv():
     base_dir = Path(__file__).resolve().parents[1]
