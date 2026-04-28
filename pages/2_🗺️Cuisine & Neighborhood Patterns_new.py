@@ -536,7 +536,7 @@ with st.container(border=True):
     st.pyplot(fig3, use_container_width=True)
     st.markdown(
         """
-**Key takeaway:** Inspection outcomes vary jointly by borough and cuisine. The heatmap highlights which cuisine categories perform relatively better or worse across boroughs.
+**Key takeaway:** Brooklyn and Queens generally have higher scores across several cuisines, which suggests food safety issues show up more often there. Manhattan is more steady, with most cuisines staying in a moderate range. The Bronx is similar overall, though a few cuisines like Indian and Thai stand out with higher scores. Staten Island looks more uneven, likely because there are fewer restaurants, so the results fluctuate more.
 """
     )
 
